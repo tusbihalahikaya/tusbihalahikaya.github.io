@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ÿ™ÿµÿ®ÿ≠ ÿπŸÑŸâ ÿ≠ŸÉÿßŸäÿ© ‚Äî ŸäŸàÿ™ŸäŸàÿ®</title>
+<meta name="description" content="ÿßŸÑŸÇÿµÿ© ŸÉÿßŸÖŸÑÿ© ÿπŸÑŸâ ŸÇŸÜÿßÿ© ¬´ÿ™ÿµÿ®ÿ≠ ÿπŸÑŸâ ÿ≠ŸÉÿßŸäÿ©¬ª ŸÅŸä ŸäŸàÿ™ŸäŸàÿ®.">
+<meta property="og:title" content="ÿ™ÿµÿ®ÿ≠ ÿπŸÑŸâ ÿ≠ŸÉÿßŸäÿ© ‚Äî ÿßŸÑŸÇÿµÿ© ŸÉÿßŸÖŸÑÿ© ÿπŸÑŸâ ŸäŸàÿ™ŸäŸàÿ®">
+<meta property="og:description" content="ÿ≠ŸÉÿßŸäÿßÿ™ ÿπÿ±ÿ®Ÿäÿ© ÿ≠ŸÇŸäŸÇŸäÿ© ŸÇÿ®ŸÑ ÿßŸÑŸÜŸàŸÖ. ÿ≠ŸÉÿßŸäÿ© ÿ¨ÿØŸäÿØÿ© ŸÉŸÑ ŸäŸàŸÖŸäŸÜ.">
+<style>
+  :root { --night:#0F1B2D; --amber:#E8B04B; --ink:#EDE6D6; --soft:#9fb0c8; }
+  * { box-sizing:border-box; }
+  html,body { height:100%; margin:0; }
+  body { background:var(--night); color:var(--ink); font-family:-apple-system,"Segoe UI",Tahoma,"Noto Sans Arabic",sans-serif;
+         display:flex; align-items:center; justify-content:center; padding:24px 16px; text-align:center; }
+  main { width:100%; max-width:420px; }
+  .moon { width:84px; height:84px; margin:0 auto 18px; border-radius:50%; box-shadow:inset -18px 6px 0 0 var(--amber); transform:rotate(-20deg); }
+  h1 { font-size:28px; margin:0 0 8px; }
+  p { font-size:17px; line-height:1.7; margin:0 0 22px; color:var(--soft); }
+  a.btn { display:block; background:var(--amber); color:#1b1405; text-decoration:none; font-weight:800; font-size:21px;
+          padding:18px 16px; border-radius:16px; }
+  a.btn:active { transform:scale(.98); }
+  .help { margin-top:22px; font-size:15px; line-height:1.8; color:var(--soft); display:none; }
+  .help a { color:var(--amber); }
+  .help b { color:var(--ink); }
+</style>
+</head>
+<body>
+<main>
+  <div class="moon" aria-hidden="true"></div>
+  <h1>ÿ™ÿµÿ®ÿ≠ ÿπŸÑŸâ ÿ≠ŸÉÿßŸäÿ©</h1>
+  <p id="line">ÿßŸÑŸÇÿµÿ© ŸÉÿßŸÖŸÑÿ© ÿπŸÑŸâ ŸÇŸÜÿßÿ™ŸÜÿß ŸÅŸä ŸäŸàÿ™ŸäŸàÿ®‚Ä¶ ÿ≠ŸÉÿßŸäÿ© ÿ¨ÿØŸäÿØÿ© ŸÉŸÑ ŸäŸàŸÖŸäŸÜ.</p>
+  <a class="btn" id="open" href="https://www.youtube.com/@tusbihalahikaya?sub_confirmation=1">ÿßŸÅÿ™ÿ≠ ŸÅŸä ÿ™ÿ∑ÿ®ŸäŸÇ ŸäŸàÿ™ŸäŸàÿ®</a>
+  <div class="help" id="help">
+    ŸÖÿß ŸÅÿ™ÿ≠ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇÿü ÿßÿ∂ÿ∫ÿ∑ ÿßŸÑÿ≤ÿ± ŸÖÿ±ÿ© ÿ´ÿßŸÜŸäÿ©.<br>
+    Ÿàÿ•ÿ∞ÿß ŸÖÿß ÿ≤ÿ®ÿ∑: ÿßÿ∂ÿ∫ÿ∑ <b>‚ãØ</b> ŸÅŸàŸÇÿå ŸàÿßÿÆÿ™ÿ± <b>¬´ŸÅÿ™ÿ≠ ŸÅŸä ÿßŸÑŸÖÿ™ÿµŸÅÿ≠¬ª</b>.<br>
+    ÿ£Ÿà <a id="web" href="https://www.youtube.com/@tusbihalahikaya?sub_confirmation=1">ÿßŸÅÿ™ÿ≠ ÿµŸÅÿ≠ÿ© ÿßŸÑŸÇŸÜÿßÿ© ŸÖŸÜ ŸáŸÜÿß</a>.
+  </div>
+</main>
+<script>
+(function () {
+  // The one address for both bios. It opens the channel, or one video when the address ends with ?v=<video id>.
+  var HANDLE = "@tusbihalahikaya", CHANNEL_ID = "UCSY3vvxaxk9DjNPgZ3y5EDw";
+  var v = new URLSearchParams(location.search).get("v");
+  if (!/^[A-Za-z0-9_-]{6,15}$/.test(v || "")) v = null;
+
+  var ua = navigator.userAgent || "";
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+  var web = v ? "https://www.youtube.com/watch?v=" + v
+              : "https://www.youtube.com/" + HANDLE + "?sub_confirmation=1";
+  var path = v ? "www.youtube.com/watch?v=" + v : "www.youtube.com/channel/" + CHANNEL_ID;
+  // iPhone: the YouTube app's own address scheme. Android: an intent that names the YouTube app and falls back to the web page.
+  var app = isAndroid
+    ? "intent://" + path + "#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=" + encodeURIComponent(web) + ";end"
+    : (isIOS ? "youtube://" + path : web);
+
+  var btn = document.getElementById("open"), help = document.getElementById("help");
+  document.getElementById("web").href = web;
+  btn.href = app;
+  if (v) document.getElementById("line").textContent = "ÿßŸÑŸÇÿµÿ© ŸÉÿßŸÖŸÑÿ© ÿπŸÑŸâ ŸÇŸÜÿßÿ™ŸÜÿß ŸÅŸä ŸäŸàÿ™ŸäŸàÿ®‚Ä¶ ÿßÿ∂ÿ∫ÿ∑ ŸàŸÉŸÖŸëŸÑŸáÿß.";
+
+  function showHelp() { if (!document.hidden) help.style.display = "block"; }
+  btn.addEventListener("click", function () { setTimeout(showHelp, 1800); });
+
+  // Try once by itself. Some in-app browsers block this, which is why the button is there.
+  if (isAndroid || isIOS) {
+    setTimeout(function () { location.href = app; }, 350);
+    setTimeout(showHelp, 2200);
+  } else {
+    location.replace(web);
+  }
+})();
+</script>
+</body>
+</html>
